@@ -12,7 +12,7 @@ describe('users', () => {
 
     it('should be able to create a new user', async () => {
         const response = await request(app).post('/users').send({
-            email: 'user@foo.com',
+            email: 'user@example.com',
             name: 'User example'
         })
 
