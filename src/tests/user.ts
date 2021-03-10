@@ -1,4 +1,5 @@
 import request from 'supertest'
+import { getConnection } from 'typeorm'
 import { app } from '../app'
 
 import createConnection from '../database'
@@ -10,10 +11,16 @@ describe('users', () => {
         await connection.runMigrations()
     })
 
+    afterAll(async () => {
+        const connection = getConnection()
+        await connection.dropDatabase()
+        await connection.close()
+    })
+
     it('should be able to create a new user', async () => {
         const response = await request(app).post('/users').send({
             email: 'user@example.com',
-            name: 'User example'
+            name: 'User Example',
         })
 
         expect(response.status).toBe(201)
@@ -22,7 +29,7 @@ describe('users', () => {
     it('shouldn\'t be able to create a user with exists email', async () => {
         const response = await request(app).post('/users').send({
             email: 'user@example.com',
-            name: 'User example'
+            name: 'User Example',
         })
 
         expect(response.status).toBe(400)

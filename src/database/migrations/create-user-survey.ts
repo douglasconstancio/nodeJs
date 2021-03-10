@@ -1,7 +1,7 @@
 import {MigrationInterface, QueryRunner, Table} from 'typeorm'
 
 // TODO: Why migration class name should need a JavaScript timestamp appended? 😞
-export class CreateSurveysUsers1614260256884 implements MigrationInterface {
+export class CreateSurveyUser1614260256884 implements MigrationInterface {
 
     public async up(queryRunner: QueryRunner): Promise<void> {
         await queryRunner.createTable(

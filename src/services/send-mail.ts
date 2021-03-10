@@ -1,4 +1,5 @@
 import nodemailer, { Transporter } from 'nodemailer'
+
 import handlebars from 'handlebars'
 import fs from 'fs'
 
@@ -6,13 +7,14 @@ class SendMailService {
 
     private client: Transporter
     constructor() {
-        nodemailer.createTestAccount().then(account => {
+        nodemailer.createTestAccount().then((account) => {
             const transporter = nodemailer.createTransport({
                 host: account.smtp.host,
                 port: account.smtp.port,
                 secure: account.smtp.secure,
                 auth: { user: account.user, pass: account.pass }
             })
+
             this.client = transporter
         })
     }
@@ -23,11 +25,11 @@ class SendMailService {
         const html = mailTemplateParse(variables)
 
         const message = await this.client
-            .sendMail({ to, subject, html: html, from: 'NPS <noreplay@npm.com.br>' })
+            .sendMail({ to, subject, html, from: 'NPS <noreplay@nps.com.br>' })
 
         console.log('Message sent: %s', message.messageId)
         console.log('Preview URL: %s', nodemailer.getTestMessageUrl(message))
     }
 }
 
-export default new SendMailService();
+export default new SendMailService()
