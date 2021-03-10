@@ -4,7 +4,7 @@ import { UserRepository } from '../repositories/user'
 import { SurveyRepository } from '../repositories/survey'
 import { SurveyUserRepository } from '../repositories/survey-user'
 
-export class SendMailService {
+export class SendMailController {
     async execute(request: Request, response: Response) {
         const { email, survey_id } = request.body
 

@@ -2,7 +2,7 @@ import { Request, Response } from 'express'
 import { getCustomRepository } from 'typeorm'
 import { UserRepository } from '../repositories/user'
 
-export class UserService {
+export class UserController {
 
     async create(request: Request, response: Response) {
         const userRepository = getCustomRepository(UserRepository)

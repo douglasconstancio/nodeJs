@@ -1,11 +1,11 @@
 import { getCustomRepository } from 'typeorm'
 import { Request, Response } from 'express'
-import { SurveysRepository } from '../repositories/survey'
+import { SurveyRepository } from '../repositories/survey'
 
-export class SurveyService {
+export class SurveyController {
     async create(request: Request, response: Response) {
         const { title, description } = request.body
-        const surveysRepository = getCustomRepository(SurveysRepository)
+        const surveysRepository = getCustomRepository(SurveyRepository)
 
         const survey = surveysRepository.create({
             title, description,
@@ -17,7 +17,7 @@ export class SurveyService {
     }
 
     async show(request: Request, response: Response) {
-        const surveysRepository = getCustomRepository(SurveysRepository)
+        const surveysRepository = getCustomRepository(SurveyRepository)
 
         const all = await surveysRepository.find()
 
