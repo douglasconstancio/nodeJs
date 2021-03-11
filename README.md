@@ -16,8 +16,8 @@
 ## 🔖 Sobre
 
 <p align="justify">
-Esse projeto foi desenvolvido durante a trilha de NodeJS, na quarta edição da NLW.
-Aprendemos conceitos sobre o que é um API, como iniciar um projeto utilizando Typescript e Express para gerenciamento das rotas, TypeORM para manipulação dos dados, testes automatizados e envio de e-mail.
+Esse projeto foi desenvolvido com base no projeto da trilha de NodeJS da quarta edição da NLW um evento da instituição Rocketseat.
+Nela aborda conceitos sobre o que é um API, como iniciar um projeto utilizando Typescript e Express para gerenciamento das rotas, TypeORM para manipulação dos dados, testes automatizados e envio de e-mail. <strong>A ideia é ir incrementando sempre um pouco mais </strong> 😏
 
 </p>
 
