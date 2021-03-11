@@ -3,7 +3,7 @@
 <img src="public/header.jpeg">
 
 <br/>
-<br />
+<br/>
 
 <p align="center">
   <a href="#-sobre"> Sobre </a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
