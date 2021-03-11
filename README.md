@@ -82,6 +82,6 @@ Abaixo estão algumas das tecnologias utilizadas durante o desenvolvimento da AP
 ```
 ---
 
-### Resultado dos testes atualmente:
+### Resultado da cobertura testes atualmente:
 
 <img src="public/tests.png">
