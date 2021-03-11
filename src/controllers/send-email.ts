@@ -13,7 +13,7 @@ export class SendMailController {
         const surveyRepository = getCustomRepository(SurveyRepository)
         const surveyUserRepository = getCustomRepository(SurveyUserRepository)
 
-        const { email, survey_id } = request.body
+        const { email, survey_id, test } = request.body
 
         const user = await userRepository.findOne({ email })
 
@@ -54,6 +54,10 @@ export class SendMailController {
             .create({ user_id: user.id, survey_id })
 
         await surveyUserRepository.save(surveyUser)
+
+        if (test) {
+            return response.json(surveyUser)
+        }
 
         // Send e-mail to user
         variables.id = surveyUser.id
