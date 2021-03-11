@@ -1,4 +1,4 @@
-<center><h1 >NodeJS 👨🏻‍💻</h1></center>
+<h1 align="center" >NodeJS 👨🏻‍💻</h1>
 
 <img src="public/header.jpeg">
 
@@ -73,5 +73,15 @@ Abaixo estão algumas das tecnologias utilizadas durante o desenvolvimento da AP
 
     // Iniciar projeto
     $ yarn dev
+
+    // Executar testes automatizados
+    $ yarn test
+
+    // Verificar cobertura de código dos testes
+    $ yarn test:coverage
 ```
 ---
+
+### Resultado dos testes atualmente:
+
+<img src="public/tests.png">
