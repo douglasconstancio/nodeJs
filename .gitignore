@@ -2,3 +2,5 @@
 node_modules
 src/database/database.sqlite
 src/database/database.test.sqlite
+.nyc_output/
+coverage/
